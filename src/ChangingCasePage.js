@@ -1,5 +1,5 @@
 import React,{useState}from 'react';
-
+   
   const ChangingCasePage = (props) => {
     const [text, setText] = useState("Enter text here");
   
@@ -12,6 +12,14 @@ import React,{useState}from 'react';
     let newText = text.toLowerCase();
      setText(newText);
    }
+
+   const clearText = () => {
+    let newText = "";
+     setText(newText);
+   }
+
+   
+
 
   const handleonChange = (event) => {
    setText(event.target.value);
@@ -34,10 +42,19 @@ import React,{useState}from 'react';
         </div>
           <button className="text-dark  ms-4 mb-3 p-2  btn btn-outline-success" onClick={upbuttonClick}> ConvertToUPCase</button>
           <button className="bg-warning ms-4 mb-3 p-2 btn btn-outline-success" onClick={downbuttonClick}> ConvertLowerCase</button>
+          <button className="bg-warning ms-4 mb-3 p-2 btn btn-outline-success" onClick={clearText}> Clear Text</button>
         </div>
+        </div>
+       
+       <div className="container">
+             <b><u>Your text Summary ~</u> </b> 
+             <p> no. of words : {text.split(" ").length}   and  no. of Characters : {(text.split(" ").length) ? ((text.length)-(text.split(" ").length-1)) : (text.length)}</p>
+             <p>Time taken to read words : {(text.split(" ").length)*0.008} minutes </p>
+             <h2>preview</h2>
+             <p>{text}</p>
        </div>
     </>
   )
 }
-export { ChangingCasePage};
+export {ChangingCasePage};
 
