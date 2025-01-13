@@ -23,8 +23,7 @@ import React,{useState}from 'react';
 
   const handleonChange = (event) => {
    setText(event.target.value);
-  }
-
+  } 
 
 
 
