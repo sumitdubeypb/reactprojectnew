@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 export default function footer() {
   return (
-    <footer className="py-5 ">
+    <footer className="py-2 border px-4 ">
     <div className="row">
       <div className="col-6 col-md-2 mb-3">
         <h5>Section</h5>
@@ -51,7 +51,7 @@ export default function footer() {
       </div>
     </div>
 
-    <div className="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+    <div className="d-flex flex-column flex-sm-row justify-content-between py-1 my-1 border-top">
       <p>© 2024 Company, Inc. All rights reserved.</p>
       {/* <ul className="list-unstyled d-flex">
         <li className="ms-3"><Link className="link-body-emphasis" to="#"><svg className="bi" width="24" height="24"><use xlink:to="#twitter"></use></svg></Link></li>

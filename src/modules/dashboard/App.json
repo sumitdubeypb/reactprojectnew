@@ -1,0 +1,50 @@
+
+
+[
+  {
+     "appname":"Google",
+     "appimg":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8TnrQxTZSfvVAv5WMvi3cNJZdO09N-NfkXQ&s",
+     "appcode":458,
+    
+     "applink":"https://www.google.com"
+  },
+  {
+    "appname":"Youtube",
+    "appimg":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUsHiqba_NBMET9biR2SmkUDzrBjA0Yxtqow&s",
+    "appcode":459,
+    "applink":"https://www.youtube.com"
+ },
+ 
+
+ {
+   "appname":"Instagram",
+    "appimg":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUPF_cc6tZHXUVf73vghbM3KObx8oSeuGZXw&s",
+    "appcode":460,
+    "applink":"https://www.instagram.com"
+ },
+ {
+    "appname":"Youtube",
+     "appimg":"<FaInstagramSquare />",
+     "appcode":460,
+     "applink":"https://www.instagram.com"
+  },
+  {
+    "appname":"Youtube",
+     "appimg":"<FaInstagramSquare />",
+     "appcode":460,
+     "applink":"https://www.instagram.com"
+  },
+  {
+    "appname":"Instagram",
+     "appicon":"<FaInstagramSquare />",
+     "appcode":460,
+     "applink":"https://www.instagram.com"
+  },
+  {
+    "appname":"Youtube",
+     "appicon":"<FaInstagramSquare />",
+     "appcode":460,
+     "applink":"https://www.instagram.com"
+  }
+
+]

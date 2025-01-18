@@ -2,23 +2,25 @@ import React from 'react'
 import Header from "../sharecomponent/Header";
 import Footer from "../sharecomponent/Footer";
 import Sidenav from "../sharecomponent/Sidenav";
+import {Outlet} from "react-router-dom";
 export default function Mainpage() {
   return (
     <>
-    <div className="container-fluid"> 
-      <div className="row">
-        <div className="col-12 mt-5">
-          <div><Header /></div>
-          <div>mainpage</div>
-          <div> <Sidenav /></div>
-        </div>
-       </div>
-       <div className="row">
-       <div className="col-12 mt-1">
-          <div><Footer /></div>
+     <div> <Header/></div>
+      <div className="container-fluid  border page">
+        <div className="row ">
+          <div className="col-md-2 ">
+            <Sidenav></Sidenav>
+          </div>
+          <div className="col-md-10  border  ">
+            <Outlet>outlet</Outlet>
+         </div>
+       
       </div>
       </div>
-      </div>
+      <Footer />
+
+
     </>
   )
 }

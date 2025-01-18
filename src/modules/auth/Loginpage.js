@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom'
 
 export default function Loginpage() {
   return (
+      <>
 
-    <>
-
-      < div className='container-fluid'>
-        <div className="row " >
-          <div className='container col-md-3 bg-light shadow mt-5'>
+         < div className='container-fluid'>
+          <div className="row " >
+           <div className='container col-md-3 bg-light shadow mt-5'>
             <div className='container-fluid '>
               <section className='row  mt-5' >
                 <div className='text-center mb-3'>
@@ -41,9 +40,10 @@ export default function Loginpage() {
             </div>
              
                <section className="row mt-2 mb-5">
-              <div className="col text-center ">
+              <div className="col-md text-center mt-5">
                 <button type="submit" class="btn btn-primary">Login</button>
                 <button type="cancel" class="btn btn-danger ms-5">cancel</button>
+                <button type="cancel" class="btn btn-success ms-5">New Registor User</button>
               </div>
             </section>
 
