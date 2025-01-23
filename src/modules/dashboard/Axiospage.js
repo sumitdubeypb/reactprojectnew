@@ -36,7 +36,7 @@ export default function Axiospage() {
                                  <h5 className="card-title text-danger">Price : {d.price}</h5>
                                 <h5 className="card-title">Discount % : {d.discountPercentage}</h5>
                                 <h5 className="card-title text-warning">Rating : {d.rating}</h5>
-                                <Link to={`details/`+ d.id} className="btn btn-primary">View All Details</Link>
+                                <Link to={`details/`+ d.id} className="btn btn-outline-primary">View All Details</Link>
                                 </div>
                             </div>
             

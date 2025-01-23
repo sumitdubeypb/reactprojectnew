@@ -9,7 +9,7 @@ function NavbarPage(props) {
         <nav className="navbar navbar-expand-lg  bg-primary fixed-top">
           <div className="container-fluid ">
              <a className="navbar-brand" href="/">
-              <img src="logo192.png" alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
+              <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top" />
               {props.title}
             </a>
             

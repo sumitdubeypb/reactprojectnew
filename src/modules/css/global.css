@@ -63,8 +63,9 @@
     max-height: fit-content;
   }
   .navh{
-    height:10vh;
+    height:15vh;
     font-size:22px;
+   
   }
   .play{
     display : flex;
@@ -77,4 +78,13 @@
    }
    .myerro{
     font-size : 5vw;
+ }
+ .lazyload{
+  color :red;
+  background-color : black;
+  text-align : center;
+  font-size: 10vh;
+  height : 100vh;
+   /* justify-content: center; */
+   align-items: center;
  }

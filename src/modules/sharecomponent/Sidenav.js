@@ -4,11 +4,9 @@ import { Link } from "react-router-dom"
 export default function sidenav() {
   return (
     <>
-    <div className="">
+    <div className=" ">
     <div className="flex-shrink-0 p-1  bg-dark  my-3">
 
-  
-    
     <Link to="/" className="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
      
       <span className="fs-5 fw-semibold text-white">Collapsible</span>
@@ -25,6 +23,9 @@ export default function sidenav() {
             <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">jsx</Link></li>
             <li><Link to="datafetch" className="link-body-emphasis d-inline-flex text-decoration-none rounded">fetch</Link></li>
             <li><Link to="axiospage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">axios</Link></li>
+            <li><Link to="pageination" className="link-body-emphasis d-inline-flex text-decoration-none rounded">ReactPageInation</Link></li>
+            <li><Link to="lazypage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">LazyPage</Link></li>
+            
           </ul>
         </div>
       </li>

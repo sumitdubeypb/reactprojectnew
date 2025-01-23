@@ -31,7 +31,7 @@ function Detailspage() {
     <div className='container-fluid'>
       <div className='row'>
         <div className='col-md-5 border'>
-          <img src={a.images} alt="sdfsd" width={400} height={500} />
+          <img src={a.images} alt="none" width={400} height={500} />
         </div>
         {a.id === 22 || a.id === 25 ? <div className='col-md-7 bg-danger border'>
           <h1> id: {a.id}</h1>
