@@ -27,7 +27,8 @@ export default function sidenav() {
             <li><Link to="lazypage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">LazyPage</Link></li>
             <li><Link to="reduxpage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">ReduxPage</Link></li>
             <li><Link to="reactdashboardchart" className="link-body-emphasis d-inline-flex text-decoration-none rounded">reactchart</Link></li>
-            
+            <li><Link to="customgraph" className="link-body-emphasis d-inline-flex text-decoration-none rounded">customchart</Link></li>
+            <li><Link to="branchlist/emplist" className="link-body-emphasis d-inline-flex text-decoration-none rounded">emplist</Link></li>
           </ul>
         </div>
       </li>

@@ -18,6 +18,7 @@ import Errorpage from './modules/sharecomponent/Errorpage.js';
 import Updateincrement from './modules/dashboard/Updateincrement.js';
 import {ChangingCasePage} from './ChangingCasePage.js';
 import ReduxPage from './modules/dashboard/ReduxPage.js';
+import Customgraph from './modules/dashboard/graph/Customgraph.js';
 import ReactPagination from './modules/dashboard/ReactPagination.js';
 import { Provider } from 'react-redux';
 import {mydatastore} from './modules/reduxstore/store.js';
@@ -35,12 +36,14 @@ root.render(
        <Route exact path="/registor" element={<Registorpage/>} /> 
       
         <Route exact path="dashboard" element={<Mainpage/>}>
-              <Route path="" element={<Landingpage/>} />
+             
+              <Route path="branchlist/emplist" element={<Landingpage/>} />
               <Route path="props" element={<Reactproperty/>} />
               <Route path="datafetch" element={<FeatchApipage/>} />
               <Route path="axiospage" element={<Axiospage/>} />
               <Route path="updateincrement" element={<Updateincrement/>} />
               <Route path="reduxpage" element={<ReduxPage/>} />
+              <Route path="customgraph" element={<Customgraph/>} />
               <Route path="axiospage/details/:id" element={<Detailspage/>} />
               <Route path="reactdashboardchart" element={<ReactDashboardChart/>} />
               <Route path="changingcase" element={<ChangingCasePage/>} > </Route>

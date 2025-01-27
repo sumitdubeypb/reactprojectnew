@@ -97,5 +97,39 @@
   /* justify-content: center; */
   align-items: center;
 }
+.empsalary
+{
+  height : fit-content;
+  display : flex;
+  align-items:flex-end;
+  min-height : 50vh;
+  box-sizing : border-box;
+ }
+ .empsalary li
+ {
+  flex:1;
+  list-style-type: none;
+  /* background: linear-gradient(to right, red, yellow,green,orange,blue); */
+  /* background: linear-gradient( red, yellow,green,orange,blue); */
+  width :20vw;
+  text-align : center;
+ 
+  
+}
+.price{
+  background: linear-gradient( red, yellow,green,orange,blue);
+}
+.stock{
+  background: linear-gradient(to right, red, yellow,green,orange,blue);
+}
+.rating{
+  background: linear-gradient(pink, violet,tomato,orange,blue);
+}
+.weight{
+  background: linear-gradient(to right, red,yellow);
+}
+
+ 
+  
 
 
