@@ -23,8 +23,10 @@ export default function sidenav() {
             <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">jsx</Link></li>
             <li><Link to="datafetch" className="link-body-emphasis d-inline-flex text-decoration-none rounded">fetch</Link></li>
             <li><Link to="axiospage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">axios</Link></li>
-            <li><Link to="pageination" className="link-body-emphasis d-inline-flex text-decoration-none rounded">ReactPageInation</Link></li>
+            <li><Link to="pageination" className="link-body-emphasis d-inline-flex text-decoration-none rounded">PageInation</Link></li>
             <li><Link to="lazypage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">LazyPage</Link></li>
+            <li><Link to="reduxpage" className="link-body-emphasis d-inline-flex text-decoration-none rounded">ReduxPage</Link></li>
+            <li><Link to="reactdashboardchart" className="link-body-emphasis d-inline-flex text-decoration-none rounded">reactchart</Link></li>
             
           </ul>
         </div>

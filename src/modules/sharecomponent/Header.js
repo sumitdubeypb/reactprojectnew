@@ -11,9 +11,9 @@ import { IoMdArrowDropdownCircle } from "react-icons/io";
 export default function header() {
   return (
     <header className="container-fluid ">
-      <nav className="navbar navbar-expand-lg  bg-primary  col-md-12 navh ">
+      <nav className="navbar navbar-expand-lg  bg-primary  col-md-12 navh  position-fixed-top">
 
-        <div className="container-fluid  position-fixed">
+        <div className="container-fluid ">
           {/* <Link className="navbar-brand" to="#"> */}
           <Link  to="#">
               <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="Bootstrap" width="50" height="50"   className='rounded-circle m-2'/>

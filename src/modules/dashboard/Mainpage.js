@@ -12,7 +12,7 @@ export default function Mainpage() {
           <div className="col-md-2 ">
             <Sidenav></Sidenav>
           </div>
-          <div className="col-md-10  border  ">
+          <div className="col-md-10  border ">
             <Outlet>outlet</Outlet>
          </div>
        

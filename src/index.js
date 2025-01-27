@@ -12,10 +12,12 @@ import Landingpage from './modules/dashboard/Landingpage.js';
 import Reactproperty from './modules/dashboard/Reactproperty.js';
 import FeatchApipage from './modules/dashboard/FeatchApipage.js';
 import Axiospage from './modules/dashboard/Axiospage.js';
+import ReactDashboardChart from './modules/dashboard/ReactDashbordChart.js';
 import Detailspage from './modules/dashboard/Detailspage.js';
 import Errorpage from './modules/sharecomponent/Errorpage.js';
 import Updateincrement from './modules/dashboard/Updateincrement.js';
 import {ChangingCasePage} from './ChangingCasePage.js';
+import ReduxPage from './modules/dashboard/ReduxPage.js';
 import ReactPagination from './modules/dashboard/ReactPagination.js';
 import { Provider } from 'react-redux';
 import {mydatastore} from './modules/reduxstore/store.js';
@@ -38,8 +40,9 @@ root.render(
               <Route path="datafetch" element={<FeatchApipage/>} />
               <Route path="axiospage" element={<Axiospage/>} />
               <Route path="updateincrement" element={<Updateincrement/>} />
+              <Route path="reduxpage" element={<ReduxPage/>} />
               <Route path="axiospage/details/:id" element={<Detailspage/>} />
-              
+              <Route path="reactdashboardchart" element={<ReactDashboardChart/>} />
               <Route path="changingcase" element={<ChangingCasePage/>} > </Route>
               <Route path="pageination" element={<ReactPagination/>} > </Route>
               <Route path="lazypage" element={<Suspense  fallback={ <div className="lazyload" row="7">Page Loading....</div>}><LasyPage></LasyPage></Suspense>} > </Route>

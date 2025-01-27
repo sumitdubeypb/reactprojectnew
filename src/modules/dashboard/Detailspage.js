@@ -44,6 +44,7 @@ function Detailspage() {
           <h5 className="card-title text-warning">Rating : {a.rating}</h5>
           <h5 className="card-title">Stock : {a.stock}</h5>
           <h5 className="card-title">Tags : {a.tags}</h5>
+          <h5 className="card-title">Brand : {a.weight}</h5>
           <button className="btn btn-primary m-4 " onClick={() => navigate(-1)}>Back</button>
         </div> :
           <div className='col-md-7 border'>
@@ -57,6 +58,13 @@ function Detailspage() {
             <h5 className="card-title text-warning">Rating : {a.rating}</h5>
             <h5 className="card-title">Stock : {a.stock}</h5>
             <h5 className="card-title">Tags : {a.tags}</h5>
+            <h5 className="card-title">Brand : {a.brand}</h5>
+            <h5 className="card-title">Sku : {a.sku}</h5>
+            <h5 className="card-title">Weight : {a.weight}</h5>
+            <h5 className="card-title">WarrantyInformation : {a.warrantyInformation}</h5>
+            <h5 className="card-title">ShippingInformation : {a.shippingInformation}</h5>
+            <h5 className="card-title">AvailabilityStatus : {a.availabilityStatus}</h5>
+      
             <button className="btn btn-primary m-4 " onClick={() => navigate(-1)}>Back</button>
           </div>
         }

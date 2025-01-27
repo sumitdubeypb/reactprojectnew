@@ -14,14 +14,12 @@ export default function FeatchApipage() {
   const getdataapi = () => { fetch('https://jsonplaceholder.typicode.com/posts').then((d) => { return d.json(); }).then((r) => { b(r) }) };
   useEffect(() => { getdataapi(); }, [])
   
-  // const handleOnChange = (event) => {
-  //   e(event.target.value);
-  //  } 
+  // const handleOnChange = (event) => {e(event.target.value);} 
   // const getdataapi = () => { fetch('https://jsonplaceholder.typicode.com/posts').then((response) => { if (!response.ok) { throw new Error('Network response was not ok'); } return response.json(); }).then((data) => { console.log(data); }).catch((error) => { console.error('There was a problem with the fetch operation:', error); }); }; useEffect(() => { getdataapi(); }, []);
 
   return (
     <>
-      <Updateincrement/>
+    <Updateincrement/>
       <div>FeatchApipage</div>
       {/* <div>{ab} ,  value : <input size={8} value={d}  onInput={handleOnChange}/></div> 
       <input type="button" className="btn btn-primary" value="Update" onClick={() => abc(myadd())} />
@@ -62,6 +60,7 @@ export default function FeatchApipage() {
           }
         </tbody>
       </table>
+     
     </>
   )
 }

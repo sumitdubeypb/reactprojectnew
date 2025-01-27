@@ -7,7 +7,7 @@ export default function LasyPage() {
         <div className="row">
             <div className="col-11">
                 <h6>LazyPage</h6>
-                
+              
             </div>
         </div>
      </div>

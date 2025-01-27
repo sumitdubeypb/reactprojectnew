@@ -29,6 +29,9 @@ export const counterSlice = createSlice({
         state.value=800;
     }
   },
+  
+ 
+  
 })
 
 // Action creators are generated for each case reducer function

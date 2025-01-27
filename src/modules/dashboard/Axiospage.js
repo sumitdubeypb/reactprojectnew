@@ -13,6 +13,8 @@ export default function Axiospage() {
         })
     }
 
+    
+
     useEffect(() => {
         axiosApifunc();
     }, []);
@@ -25,9 +27,10 @@ export default function Axiospage() {
                     <div className="col-12">
                         <input type="button" className="btn btn-success btn-outline-warning" value="Api call"  onClick={axiosApifunc} />
                     </div>
+                    <div className="row border">
                     {a.map((d) => {
                         return (
-                          <div className="card col-md-2 mt-2 m-1  play p-1" >
+                          <div className="card col-md-3  mt-2   play p-3" >
                                 <h5 className="card-title">ID : {d.id}</h5>
                                 
                                 <img src={d.images} className="card-img-top" alt="..."  height={100}/>
@@ -43,6 +46,7 @@ export default function Axiospage() {
                         )
                     })
                     }
+                    </div>
                 </div>
                   </div>
 
