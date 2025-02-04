@@ -5,18 +5,22 @@ import { AiFillDashboard } from "react-icons/ai";
 import { FaBorderStyle } from "react-icons/fa";
 import { MdProductionQuantityLimits } from "react-icons/md";
 import { IoMdArrowDropdownCircle } from "react-icons/io";
+import { FaCartPlus } from "react-icons/fa";
+import { decrement, increment} from "../reduxstore/actionlist";
+import { useSelector} from 'react-redux';
 
+export default function Header() {
+  const select = useSelector((state) => state.counter.cardvalue);
 
-
-export default function header() {
   return (
-    <header className="container-fluid ">
-      <nav className="navbar navbar-expand-lg  bg-primary  col-md-12 navh  position-fixed-top">
+    <header className="container-fluid">
+      <div className="col-12 position-fixed top-0">
+      <nav className="navbar navbar-expand-lg  bg-primary  navh">
 
         <div className="container-fluid ">
           {/* <Link className="navbar-brand" to="#"> */}
           <Link  to="#">
-              <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="Bootstrap" width="50" height="50"   className='rounded-circle m-2'/>
+              <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="Bootstrap"  style={{height :'7vh',width : '3vw'}}  className='rounded-circle m-2'/>
           </Link>
           {/* <Link className="navbar-brand" to="#">Navbar</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,9 +53,13 @@ export default function header() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link disabled" aria-disabled="true">Disabled</Link>
+                <Link className="nav-link disabled" aria-disabled="true">Di</Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/dashboard/reduxpage/add-to-cart" className="nav-link" aria-disabled="false" ><FaCartPlus  className="w-130" />{select}</Link>
               </li>
             </ul>
+
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
               <button className="btn border btn-outline-warning text-danger" type="submit">Search</button>
@@ -63,6 +71,7 @@ export default function header() {
           </Link>
         </div>
       </nav>
+      </div>
     </header>
   )
 }

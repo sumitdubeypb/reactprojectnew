@@ -27,10 +27,10 @@ export default function Axiospage() {
                     <div className="col-12">
                         <input type="button" className="btn btn-success btn-outline-warning" value="Api call"  onClick={axiosApifunc} />
                     </div>
-                    <div className="row border">
+                    <div className="row">
                     {a.map((d) => {
                         return (
-                          <div className="card col-md-3  mt-2   play p-3" >
+                          <div className="border col-md-3  mt-2  p-3 " >
                                 <h5 className="card-title">ID : {d.id}</h5>
                                 
                                 <img src={d.images} className="card-img-top" alt="..."  height={100}/>

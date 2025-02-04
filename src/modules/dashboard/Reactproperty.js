@@ -73,8 +73,17 @@ export default function Reactproperty() {
           </div>
         </div>
         {/* </div> */}
+
     
    
     </>
   )
 }
+
+
+
+
+
+
+
+

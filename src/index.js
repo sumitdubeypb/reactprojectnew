@@ -15,13 +15,19 @@ import Axiospage from './modules/dashboard/Axiospage.js';
 import ReactDashboardChart from './modules/dashboard/ReactDashbordChart.js';
 import Detailspage from './modules/dashboard/Detailspage.js';
 import Errorpage from './modules/sharecomponent/Errorpage.js';
+import Forgotpassword from './modules/auth/Forgotpassword.js';
 import Updateincrement from './modules/dashboard/Updateincrement.js';
+import Welcome from './modules/dashboard/Welcome.js';
 import {ChangingCasePage} from './ChangingCasePage.js';
 import ReduxPage from './modules/dashboard/ReduxPage.js';
+import AddToCart from './modules/dashboard/AddToCart.js';
 import Customgraph from './modules/dashboard/graph/Customgraph.js';
 import ReactPagination from './modules/dashboard/ReactPagination.js';
 import { Provider } from 'react-redux';
 import {mydatastore} from './modules/reduxstore/store.js';
+import Jsonalldatapage from './modules/dashboard/jsonpage.js/jsonalldatapage.js';
+import Jsoneditpage from './modules/dashboard/jsonpage.js/jsoneditpage.js';
+import Jsonlogin from './modules/dashboard/jsonpage.js/jsonlogin.js';
 const LasyPage = React.lazy(() => import('./modules/dashboard/LasyPage.js'));
 
 
@@ -33,17 +39,22 @@ root.render(
     <BrowserRouter>
        <Routes>
        <Route path="" element={<Loginpage/>} > </Route>
-       <Route exact path="/registor" element={<Registorpage/>} /> 
+       <Route exact path="/new-registor-user" element={<Registorpage/>} /> 
+       <Route exact path="/forgotpassword" element={<Forgotpassword/>} /> 
       
         <Route exact path="dashboard" element={<Mainpage/>}>
-             
+              <Route path="" element={<Welcome/>} />
               <Route path="branchlist/emplist" element={<Landingpage/>} />
               <Route path="props" element={<Reactproperty/>} />
               <Route path="datafetch" element={<FeatchApipage/>} />
               <Route path="axiospage" element={<Axiospage/>} />
               <Route path="updateincrement" element={<Updateincrement/>} />
               <Route path="reduxpage" element={<ReduxPage/>} />
+              <Route path="reduxpage/add-to-cart" element={<AddToCart/>} />
               <Route path="customgraph" element={<Customgraph/>} />
+              <Route path='jsonlogin' element={<Jsonlogin/>}/>
+             <Route path='jsonalldata' element={<Jsonalldatapage/>}/>
+            <Route path='jsonalldata/editpage/:id' element={<Jsoneditpage/>}/>
               <Route path="axiospage/details/:id" element={<Detailspage/>} />
               <Route path="reactdashboardchart" element={<ReactDashboardChart/>} />
               <Route path="changingcase" element={<ChangingCasePage/>} > </Route>

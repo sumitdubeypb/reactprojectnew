@@ -62,7 +62,7 @@
 }
 
 .page {
-  margin-top: 15px;
+  margin-top: 7.5vh;
   min-height: 80vh;
   max-height: fit-content;
 }
@@ -73,9 +73,6 @@
 
 }
 
-.play {
-  display: flex;
-}
 
 /* .play > div{
     flex :1 ;
@@ -130,6 +127,5 @@
 }
 
  
-  
 
 

@@ -1,0 +1,14 @@
+{
+ 
+  "users":[
+    {
+       "id" : "123",
+        "emailaddress": "@gmail.com",
+      "fullnames": "red",
+      "dob": "20-01-2002",
+      "gender": "male",
+      "password": "asfghjk",
+      "confirmpassword": "asfghjk"
+    }
+  ]
+}

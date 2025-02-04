@@ -1,46 +1,42 @@
 
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
-
 import axios from 'axios';
-import { printcard } from '../reduxstore/MycardlistSlice.js';
-
-
+import { printcard, addTocart } from '../reduxstore/MycardlistSlice.js';
 import Updateincrement from '../dashboard/Updateincrement.js';
+import { decrement, increment, incrementByAmount, decrementByAmount} from "../reduxstore/actionlist";
 
 export default function ReduxPage() {
     const [a, b] = useState([])
-    const { id } = useParams();
+    const ac = useSelector((state) => state.card.cardvalue);
+    const atc = useSelector((state) => state.card.cartvalue);
 
+    const dispatch = useDispatch();
 
     const axiosApifunc = () => {
         axios.get('https://dummyjson.com/products').then((d) => {
             b(d.data.products);
-            console.log(d.data);
-        
+            // console.log(d.data);
         })
     }
-
-    const axiosApifuncid = () => {
+    const axiosApifuncid = (id) => {
         axios.get(`https://dummyjson.com/products/${id}`).then((d) => {
-            b(d.data.products);
+            // b(d.data.products);
             // console.log(d);
             console.log(d.data);
+            dispatch(addTocart(d.data));
+            console.log(atc)
+            dispatch(increment());
             // console.log(d.data.carts);
         })
     }
-
     useEffect(() => {
         axiosApifunc();
     }, []);
 
+    // console.log(ac);
 
-    // const abc = useDispatch();
-    const ac = useSelector((state) => state.card.cardvalue);
-    const dispatch = useDispatch();
-    console.log(ac);
     return (
         <>
             <div>ReduxPage</div>
@@ -55,10 +51,6 @@ export default function ReduxPage() {
                         <input type="button" className="btn btn-outline-warning  bg-success" value="cardUpdae" onClick={() => dispatch(printcard())} />
                     </div>
                     <div className="row border">
-                        <Updateincrement />
-                    </div>
-
-                    <div className="row border">
                         {a.map((d) => {
                             return (
                                 <div className="card col-md-3 mt-2 p-3  play p-1" >
@@ -70,25 +62,16 @@ export default function ReduxPage() {
                                         <h5 className="card-title text-danger">Price : {d.price}</h5>
                                         <h5 className="card-title">Discount % : {d.discountPercentage}</h5>
                                         <h5 className="card-title text-warning">Rating : {d.rating}</h5>
-                                        <button className="btn btn-outline-primary" onClick>Details</button>
-                                        <Link to={`details/` + d.id} className="btn btn-outline-danger m-2">Add to Cart</Link>
+                                        <button className="btn btn-outline-primary m-2 " >Details </button>
+                                        <Link to="add-to-cart"> <button className="btn btn-outline-danger m-2" onClick={() => axiosApifuncid(d.id)} >   Add to Cart</button>  </Link>
                                     </div>
                                 </div>
-
                             )
                         })
                         }
-                    
                     </div>
-
-
                 </div>
             </div>
-
-
-
-
-
         </>
     )
 }
