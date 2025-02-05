@@ -20,7 +20,7 @@ export default function Header() {
         <div className="container-fluid ">
           {/* <Link className="navbar-brand" to="#"> */}
           <Link  to="#">
-              <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="Bootstrap"  style={{height :'7vh',width : '3vw'}}  className='rounded-circle m-2'/>
+              <img src="https://www.thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg" alt="Bootstrap"   width={50} height={50}   className='rounded-circle m-2'/>
           </Link>
           {/* <Link className="navbar-brand" to="#">Navbar</Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
