@@ -1,12 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+
 
 export default function RegisterPage() {
   const { register, handleSubmit,watch, formState: { errors } } = useForm();
+  const nav=useNavigate();
 
   const mySubmit = (data) => {
     console.log(data);
+    nav("/");
   };
   const password = watch('password');
   return (
@@ -70,7 +73,7 @@ export default function RegisterPage() {
                 </section>
                 <section className="row mt-2 mb-5">
                   <div className="col text-center">
-                    <Link to="/"> <button type="submit" className="btn btn-primary">Register</button></Link>
+                     <button type="submit" className="btn btn-primary">Register</button>
                     <Link to="/"><button type="button" className="btn btn-danger ms-5">Cancel</button></Link>
                   </div>
                 </section>

@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { printcard, addTocart } from '../reduxstore/MycardlistSlice.js';
 import Updateincrement from '../dashboard/Updateincrement.js';
-import { decrement, increment, incrementByAmount, decrementByAmount} from "../reduxstore/actionlist";
+import { increment} from "../reduxstore/actionlist";
 
 export default function ReduxPage() {
     const [a, b] = useState([])
@@ -37,6 +37,18 @@ export default function ReduxPage() {
 
     // console.log(ac);
 
+    const renderStars = (rating) => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                stars.push(<span key={i}>&#9733;</span>); // filled star
+            } else {
+                stars.push(<span key={i}>&#9734;</span>); // empty star
+            }
+        }
+        return stars;
+    };
+
     return (
         <>
             <div>ReduxPage</div>
@@ -50,7 +62,8 @@ export default function ReduxPage() {
                         <p>{ac}</p>
                         <input type="button" className="btn btn-outline-warning  bg-success" value="cardUpdae" onClick={() => dispatch(printcard())} />
                     </div>
-                    <div className="row border">
+                    <div className="row">
+                        <div></div>
                         {a.map((d) => {
                             return (
                                 <div className="card col-md-3 mt-2 p-3  play p-1" >
@@ -61,9 +74,9 @@ export default function ReduxPage() {
                                         <h5 className="card-title">{d.title}</h5>
                                         <h5 className="card-title text-danger">Price : {d.price}</h5>
                                         <h5 className="card-title">Discount % : {d.discountPercentage}</h5>
-                                        <h5 className="card-title text-warning">Rating : {d.rating}</h5>
-                                        <button className="btn btn-outline-primary m-2 " >Details </button>
-                                        <Link to="add-to-cart"> <button className="btn btn-outline-danger m-2" onClick={() => axiosApifuncid(d.id)} >   Add to Cart</button>  </Link>
+                                        <h5 className="card-title text-warning">Rating :  {renderStars(d.rating)}</h5>
+                                        <Link to={`/dashboard/axiospage/details/` + d.id}><button className="btn btn-outline-primary m-2" >Details </button></Link>
+                                        <Link to="add-to-cart"> <button className="btn btn-outline-danger m-2" onClick={() => axiosApifuncid(d.id)} >  Add to Cart</button>  </Link>
                                     </div>
                                 </div>
                             )
@@ -75,3 +88,4 @@ export default function ReduxPage() {
         </>
     )
 }
+

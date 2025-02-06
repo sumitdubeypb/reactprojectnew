@@ -57,6 +57,7 @@ const deleterecord = (id)=>
     <table className="table table-bordered border-primary">
                 <thead>
                     <tr>
+                        <th scope='col'>Serial no.</th>
                         <th scope="col">Id</th>
                         <th scope="col">FullName</th>
                         <th scope="col">Email</th>
@@ -70,7 +71,8 @@ const deleterecord = (id)=>
                     {user.map((d,sn=1) => {
                         return (
                             <tr key={d.id}>
-                                <th scope="row">{d.id}</th>
+                                <th  scope="row">{++sn}</th>
+                                <th>{d.id}</th>
                                 <td>{d.fullname}</td>
                                 <td>{d.email}</td>
                                 <td>{d.dob}</td>

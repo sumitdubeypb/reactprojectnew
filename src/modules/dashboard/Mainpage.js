@@ -6,7 +6,7 @@ import {Outlet} from "react-router-dom";
 export default function Mainpage() {
   return (
     <>
-     <div > <Header /></div>
+      <Header />
       <div className="container-fluid  border page">
        <div className="row page">
           <div className="col-md-2">

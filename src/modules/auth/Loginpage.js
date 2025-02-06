@@ -49,7 +49,7 @@ const handlepassword = (e) => {
                 {/* <div className="text-center">Login User</div> */}
                 <h1 className="text-center">Login User</h1>
               </section>
-              <section className="row mt-2">wea
+              <section className="row mt-2">
                 <div className="mb-3">
                   <label for="exampleInputEmail1" className="form-label"  >Email address</label>
                   <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"   onInput={handleEmailId} value={myform.email}/>
