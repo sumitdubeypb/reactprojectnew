@@ -21,20 +21,20 @@ export default function Axiospage() {
 
     return (
         <>
-            <div className="container">
+            <div >
                 <div className="row">
-                    <div>AxiosPage......</div>
+                    
                     <div className="col-12">
                         <input type="button" className="btn btn-success btn-outline-warning" value="Api call"  onClick={axiosApifunc} />
                     </div>
                     <div className="row">
                     {a.map((d) => {
                         return (
-                          <div className="border col-md-3  mt-2  p-3 " >
+                          <div className="card col-md-3  mt-2  p-3 " >
                                 <h5 className="card-title">ID : {d.id}</h5>
                                 
-                                <img src={d.images} className="card-img-top" alt="..."  height={100}/>
-                                <div classNameName="card-body">
+                                <img src={d.images} className="card-img-top" alt="..."  height={150}/>
+                                <div className="card-body m-3">
                                 <h5 className="card-title">{d.title}</h5>
                                  <h5 className="card-title text-danger">Price : {d.price}</h5>
                                 <h5 className="card-title">Discount % : {d.discountPercentage}</h5>

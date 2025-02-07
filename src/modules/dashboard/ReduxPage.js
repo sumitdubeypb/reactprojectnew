@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import { printcard, addTocart } from '../reduxstore/MycardlistSlice.js';
-import Updateincrement from '../dashboard/Updateincrement.js';
-import { increment} from "../reduxstore/actionlist";
+
 
 export default function ReduxPage() {
     const [a, b] = useState([])
@@ -27,7 +26,7 @@ export default function ReduxPage() {
             console.log(d.data);
             dispatch(addTocart(d.data));
             console.log(atc)
-            dispatch(increment());
+        
             // console.log(d.data.carts);
         })
     }
@@ -50,13 +49,11 @@ export default function ReduxPage() {
     };
 
     return (
-        <>
-            <div>ReduxPage</div>
-            <div className="container">
+        
+        
+            <div >
                 <div className="row">
-                    <div className="col-md-6 border">
-                        <Updateincrement />
-                    </div>
+                  
                     <div className="col-md-6 border">
                         <p>card......</p>
                         <p>{ac}</p>
@@ -85,7 +82,7 @@ export default function ReduxPage() {
                     </div>
                 </div>
             </div>
-        </>
+        
     )
 }
 

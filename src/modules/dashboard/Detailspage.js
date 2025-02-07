@@ -66,6 +66,7 @@ function Detailspage() {
             <h5 className="card-title">AvailabilityStatus : {a.availabilityStatus}</h5>
       
             <button className="btn btn-primary m-4 " onClick={() => navigate(-1)}>Back</button>
+            <button className="btn btn-success m-2">COMPLETE ORDER</button>
           </div>
         }
       </div>

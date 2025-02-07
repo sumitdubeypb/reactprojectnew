@@ -17,7 +17,7 @@ const columns = [
       { field: 'id', headerName: 'ID', width: 70 },
       { field: 'userId', headerName: 'UserId', width: 70 },
       { field: 'title', headerName: 'Title', width: 500},
-      {field: 'body',headerName: 'Body Text',  type: 'number',width: 700},
+      {field: 'body',headerName: 'Body Text',  type: 'number',width: 800},
       {field: 'button',headerName: 'Button',description: 'This column has a value getter and is not sortable.',sortable: false,width: 160,valueGetter: (value, row) => `${row.id || ''} ${row.userId || ''}`},
     ];
     const paginationModel = { page: 0, pageSize: 5 };
@@ -25,7 +25,7 @@ const columns = [
   return (
     <>
     <div>ReactPagination</div>
-       <Paper sx={{ height: 600, width: '100%', backgroundColor: 'darkgray' }}>
+       <Paper sx={{ height: 700, width: '100%', backgroundColor: 'darkgray' }}>
         <DataGrid
           rows={a}
          columns={columns}

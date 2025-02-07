@@ -73,10 +73,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { decrement, increment } from "../reduxstore/actionlist";
+import {removeItem} from "../reduxstore/MycardlistSlice"
 
 export default function AddToCart() {
-    const count = useSelector((state) => state.counter.value);
+    
     const cartItems = useSelector((state) => state.card.cartvalue);
     const dispatch = useDispatch();
 
@@ -100,11 +100,12 @@ export default function AddToCart() {
                                             <img src={item.images} alt={item.title} className="p-1" style={{ height: '20vh', width: '10vw' }} />
                                         </td>
                                         <td>
-                                            <h5>{item.title}</h5>
+                                            <h5 className='mt-5'>{item.title}</h5>
                                             <h3 className="text-warning">${item.price}</h3>
                                         </td>
-                                        <td>
-                                           
+                                        <td className='p-2 border'>
+                                           <button className='btn btn-danger mt-5 ' onClick={() => dispatch(removeItem())} >remove</button>
+                                             <Link to={`/dashboard/axiospage/details/` + item.id}><button className="btn btn-outline-primary m-2" >Details </button></Link>
                                         </td>
                                     </tr>
                                 ))}

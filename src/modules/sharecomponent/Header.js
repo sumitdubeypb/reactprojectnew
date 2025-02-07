@@ -13,7 +13,7 @@ export default function Header() {
     const cartItems = useSelector((state) => state.card.cartvalue);
 
     return (
-        <header className="container-fluid position-fixed top-0">
+        <header className="container-fluid" style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1,boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }} >
             <div className="col-12">
                 <nav className="navbar navbar-expand-lg bg-primary navh">
                     <div className="container-fluid">
@@ -51,7 +51,7 @@ export default function Header() {
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/dashboard/reduxpage/add-to-cart" className="nav-link" aria-disabled="false">
-                                        <FaCartPlus className= "w-130"/>
+                                        <FaCartPlus className= "icon-large"/>
                                         {cartItems.length > 0 && (
                                             <span className="cart-count">{cartItems.length}</span>
                                         )}

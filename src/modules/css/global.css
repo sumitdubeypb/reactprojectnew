@@ -130,8 +130,8 @@
 }
  .cart-count {
   position: relative;
-    top: -14px;
-    right: -1px;
+    top: -25px;
+    right: 2px;
     background-color: red;
     color: white;
     border-radius: 50%;
@@ -140,4 +140,6 @@
     line-height: 1rem;
     text-align: center;
 }
-
+.icon-large {
+  font-size: 3rem; /* Adjust the size as needed */
+}
