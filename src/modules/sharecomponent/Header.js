@@ -14,7 +14,7 @@ export default function Header() {
 
     return (
         <header className="container-fluid" style={{ position: 'fixed', top: 0, width: '100%', zIndex: 1,boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)' }} >
-            <div className="col-12">
+            <div className="col-md-12">
                 <nav className="navbar navbar-expand-lg bg-primary navh">
                     <div className="container-fluid">
                         <Link to="#">
@@ -49,7 +49,7 @@ export default function Header() {
                                         <li><Link className="dropdown-item" to="#">Something else here</Link></li>
                                     </ul>
                                 </li>
-                                <li className="nav-item">
+                                <li className="nav-item  text-center">
                                     <Link to="/dashboard/reduxpage/add-to-cart" className="nav-link" aria-disabled="false">
                                         <FaCartPlus className= "icon-large"/>
                                         {cartItems.length > 0 && (
